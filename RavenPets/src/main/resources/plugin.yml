@@ -1,0 +1,65 @@
+name: RavenPets
+version: '1.0-SNAPSHOT'
+main: RavenMC.ravenPets.RavenPets
+api-version: '1.21'
+prefix: RavenPets
+authors: [ Realisticrave ]
+website: https://www.ravenmc.online
+softdepend: [Citizens, LuckPerms, PlaceholderAPI]
+
+commands:
+  ravenpet:
+    description: Main command for the RavenPets plugin
+    usage: /ravenpet [help|spawn|upgrade|info|abilities|settings]
+    aliases: [raven, rp]
+
+  ravenblock:
+    description: Command for managing raven pet blocks
+    usage: /ravenblock [give|help]
+    aliases: [rb]
+
+permissions:
+  ravenpets.admin:
+    description: Allows access to all RavenPets admin commands
+    default: op
+    children:
+      ravenpets.use: true
+      ravenpets.upgrade: true
+      ravenpets.abilities: true
+      ravenpets.block.give: true
+
+  ravenpets.use:
+    description: Allows players to use the basic RavenPets commands
+    default: true
+
+  ravenpets.upgrade:
+    description: Allows players to upgrade their raven
+    default: true
+
+  ravenpets.abilities:
+    description: Allows players to use raven abilities
+    default: true
+
+  ravenpets.block.give:
+    description: Allows players to give raven blocks
+    default: op
+
+  ravenpets.tier.1:
+    description: Allows players to use Novice ravens
+    default: true
+
+  ravenpets.tier.2:
+    description: Allows players to use Adept ravens
+    default: true
+
+  ravenpets.tier.3:
+    description: Allows players to use Expert ravens
+    default: true
+
+  ravenpets.tier.4:
+    description: Allows players to use Master ravens
+    default: true
+
+  ravenpets.tier.5:
+    description: Allows players to use Legendary ravens
+    default: true

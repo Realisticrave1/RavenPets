@@ -1,0 +1,282 @@
+# RavenPets Configuration
+# Version: 1.0.0
+
+# Database settings
+database:
+  # Database type (mysql or sqlite)
+  type: sqlite
+  # MySQL settings (only used if type is mysql)
+  mysql:
+    host: localhost
+    port: 3306
+    database: ravenpets
+    username: root
+    password: password
+    ssl: false
+    connection-pool: 5
+
+# General settings
+settings:
+  # Whether to automatically spawn the raven when a player joins
+  auto-spawn: true
+
+  # Whether to automatically save raven data (in seconds, set to 0 to disable)
+  auto-save: 300
+
+  # Whether to automatically respawn the raven when it dies
+  auto-respawn: true
+
+  # Maximum distance from owner before teleporting back
+  max-distance: 20
+
+  # Default name for new ravens
+  default-name: "Raven"
+
+  # Whether to show particle effects for ravens
+  particle-effects: true
+
+  # Whether to play sound effects
+  sound-effects: true
+
+  # Debug mode
+  debug: false
+
+# Block settings
+blocks:
+  # Whether to enable giving blocks through commands
+  enabled: true
+
+  # Whether placing a block should consume it
+  consume-on-use: true
+
+  # Whether to allow placing blocks in survival mode
+  survival-placement: true
+
+  # Tier-specific block settings
+  tiers:
+    novice:
+      material: PURPLE_CONCRETE
+      glow: true
+    adept:
+      material: PURPLE_TERRACOTTA
+      glow: true
+    expert:
+      material: PURPLE_WOOL
+      glow: true
+    master:
+      material: PURPLE_GLAZED_TERRACOTTA
+      glow: true
+    legendary:
+      material: PURPUR_BLOCK
+      glow: true
+
+# Experience settings
+experience:
+  # Base XP required for level up
+  base-xp: 100
+
+  # XP multiplier per level
+  xp-multiplier: 50
+
+  # Max level for ravens
+  max-level: 100
+
+  # XP gain settings
+  xp-gain:
+    # XP from killing mobs
+    mob-kill:
+      enabled: true
+      multiplier: 1.0
+      # Specific mob XP values
+      values:
+        ENDER_DRAGON: 1000
+        WITHER: 500
+        ELDER_GUARDIAN: 300
+        WARDEN: 700
+        RAVAGER: 200
+        CREEPER: 50
+        ZOMBIE: 20
+        SKELETON: 20
+        SPIDER: 20
+        default: 10
+
+    # XP from mining blocks
+    mining:
+      enabled: true
+      multiplier: 1.0
+
+    # XP from crafting items
+    crafting:
+      enabled: true
+      multiplier: 1.0
+
+    # XP from brewing potions
+    brewing:
+      enabled: true
+      multiplier: 1.0
+
+# Tier level requirements
+tier-levels:
+  novice: 1
+  adept: 11
+  expert: 26
+  master: 51
+  legendary: 76
+
+# Raven abilities settings
+abilities:
+  # Retrieval ability settings
+  retrieval:
+    # Item retrieval default radius
+    base-radius: 10
+
+    # Whether to automatically pick up items
+    auto-pickup: true
+
+  # Flight ability settings
+  flight:
+    # Whether to give player flight ability
+    enable-player-flight: true
+
+    # Whether to apply fall damage immunity during flight
+    disable-fall-damage: true
+
+    # Flight duration for each tier (in seconds)
+    duration:
+      adept: 30
+      expert: 120
+      master: 300
+      legendary: -1  # -1 for unlimited
+
+  # Night vision settings
+  night-vision:
+    # Effect duration (in seconds)
+    duration: 60
+
+    # Effect amplifier (0 = level 1)
+    amplifier: 0
+
+  # Combat assistance settings
+  combat:
+    # Damage boost percentage
+    damage-boost:
+      expert: 10
+      master: 20
+      legendary: 30
+
+    # Whether to apply defense boost
+    defense-boost:
+      enabled: true
+      expert: 5
+      master: 10
+      legendary: 15
+
+  # Auto-repair settings
+  auto-repair:
+    # Repair interval (in seconds)
+    interval: 60
+
+    # Durability repaired per interval (percentage)
+    amount: 5
+
+    # Whether to repair equipped items
+    repair-equipped: true
+
+  # Weather control settings
+  weather-control:
+    # Whether to enable weather control
+    enabled: true
+
+    # Cooldown between uses (in seconds)
+    cooldown: 3600
+
+  # Home locations
+  home-locations:
+    # Maximum number of home locations per tier
+    max-homes:
+      novice: 0
+      adept: 3
+      expert: 5
+      master: 8
+      legendary: -1  # -1 for unlimited
+
+    # Cooldown between teleports (in seconds)
+    teleport-cooldown: 60
+
+# Visual effects
+visual-effects:
+  # Particle effects for each tier
+  particles:
+    novice:
+      enabled: true
+      type: PORTAL
+      count: 2
+    adept:
+      enabled: true
+      type: PORTAL
+      count: 4
+    expert:
+      enabled: true
+      type: DRAGON_BREATH
+      count: 6
+    master:
+      enabled: true
+      type: SOUL_FIRE_FLAME
+      count: 8
+    legendary:
+      enabled: true
+      type: END_ROD
+      count: 10
+
+  # Sound effects
+  sounds:
+    # Sound when raven spawns
+    spawn:
+      enabled: true
+      sound: ENTITY_PARROT_AMBIENT
+      volume: 1.0
+      pitch: 1.0
+
+    # Sound when raven levels up
+    level-up:
+      enabled: true
+      sound: ENTITY_PLAYER_LEVELUP
+      volume: 1.0
+      pitch: 1.0
+
+    # Sound when raven evolves
+    evolve:
+      enabled: true
+      sound: ENTITY_ENDER_DRAGON_GROWL
+      volume: 0.5
+      pitch: 1.5
+
+# Citizens integration
+citizens:
+  # Whether to enable Citizens integration
+  enabled: true
+
+  # Whether to create NPCs
+  create-npcs: false
+
+  # Whether to create Raven Master NPC
+  create-raven-master: false
+
+  # Whether to create Raven Trainer NPC
+  create-raven-trainer: false
+
+# LuckPerms integration
+luckperms:
+  # Whether to enable LuckPerms integration
+  enabled: true
+
+  # Whether to set meta data in LuckPerms
+  set-metadata: true
+
+  # Whether to enable special titles for legendary raven owners
+  legendary-titles: true
+
+# PlaceholderAPI integration
+placeholderapi:
+  # Whether to enable PlaceholderAPI integration
+  enabled: true

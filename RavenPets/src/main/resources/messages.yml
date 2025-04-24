@@ -1,0 +1,106 @@
+# RavenPets Messages
+# Version: 1.0.0
+
+# General messages
+prefix: "&5[RavenPets] &r"
+no-permission: "{prefix}&cYou don't have permission to do that!"
+command-not-found: "{prefix}&cCommand not found. Use &e/ravenpet help &cfor a list of commands."
+player-only: "{prefix}&cThis command can only be used by players!"
+player-not-found: "{prefix}&cPlayer not found!"
+invalid-number: "{prefix}&cInvalid number!"
+
+# Raven messages
+raven-spawned: "{prefix}Your {tier} has been summoned!"
+raven-despawned: "{prefix}Your raven has been dismissed."
+raven-not-active: "{prefix}&cYour raven is not active!"
+raven-already-active: "{prefix}&cYour raven is already active!"
+raven-name-set: "{prefix}Your raven has been renamed to &d{name}&f!"
+raven-name-invalid: "{prefix}&cRaven name must be between 3 and 16 characters!"
+raven-name-inappropriate: "{prefix}&cThat name is not allowed!"
+raven-level-up: "{prefix}Your raven has reached level &d{level}&f!"
+raven-tier-up: "{prefix}Your raven has evolved to &d{tier}&f tier!"
+raven-xp-gained: "{prefix}Your raven gained &d{xp}&f XP! (&d{current}&f/&d{required}&f)"
+raven-max-level: "{prefix}&cYour raven is already at the maximum level!"
+raven-respawned: "{prefix}Your raven has been respawned!"
+
+# Home messages
+home-added: "{prefix}Home location added! You now have &d{current}&f/&d{max}&f home locations."
+home-max-reached: "{prefix}&cYou can't add more home locations! Maximum: &d{max}&c"
+home-none: "{prefix}&cYou don't have any home locations yet!"
+home-teleported: "{prefix}Teleported to home location &d{id}&f!"
+home-invalid-id: "{prefix}&cInvalid home location id!"
+home-no-teleport: "{prefix}&cYour raven needs the teleportation ability!"
+
+# Ability messages
+ability-unlocked: "{prefix}Your raven has unlocked the &d{ability}&f ability!"
+ability-used: "{prefix}Used the &d{ability}&f ability!"
+ability-cooldown: "{prefix}&cThis ability is on cooldown for &d{time}&c seconds!"
+ability-not-unlocked: "{prefix}&cYour raven doesn't have this ability yet!"
+ability-not-found: "{prefix}&cAbility not found!"
+
+# Upgrade messages
+upgrade-success: "{prefix}Your raven has been upgraded to &d{tier}&f!"
+upgrade-failed: "{prefix}&cYour raven could not be upgraded to &d{tier}&c!"
+upgrade-max-tier: "{prefix}&cYour raven is already at the highest tier!"
+upgrade-level-requirement: "{prefix}&cYour raven needs to be at least level &d{level}&c to upgrade to &d{tier}&c!"
+
+# Item messages
+item-given: "{prefix}You've been given a &d{item}&f!"
+item-not-found: "{prefix}&cItem not found!"
+item-crafted: "{prefix}You've crafted a &d{item}&f!"
+item-not-enough-materials: "{prefix}&cYou don't have enough materials to craft this item!"
+
+# Admin messages
+admin-xp-added: "{prefix}Added &d{xp}&f XP to &d{player}&f's raven!"
+admin-level-set: "{prefix}Set &d{player}&f's raven level to &d{level}&f!"
+admin-tier-set: "{prefix}Set &d{player}&f's raven tier to &d{tier}&f!"
+admin-raven-reset: "{prefix}Reset &d{player}&f's raven data!"
+admin-all-ravens-saved: "{prefix}All ravens have been saved!"
+admin-config-reloaded: "{prefix}Configuration reloaded!"
+
+# Error messages
+error-loading-raven: "{prefix}&cError loading your raven! Please contact an administrator."
+error-database: "{prefix}&cDatabase error! Please contact an administrator."
+error-saving-raven: "{prefix}&cError saving your raven data! Please contact an administrator."
+
+# Tutorial messages
+tutorial-welcome: "{prefix}Welcome to &dRavenMC&f! Complete the welcome tutorial to claim your Raven Egg."
+tutorial-complete: "{prefix}Congratulations! You've completed the welcome tutorial!"
+tutorial-egg-claimed: "{prefix}You've claimed your Raven Egg! Use &d/ravenpet spawn&f to summon your new companion."
+
+# Titles
+title-level-up: "&5Level Up!"
+subtitle-level-up: "&dYour raven is now level {level}"
+title-tier-up: "&5Evolution!"
+subtitle-tier-up: "&dYour raven evolved to {tier}"
+title-tutorial-complete: "&5Tutorial Complete!"
+subtitle-tutorial-complete: "&dClaim your Raven Egg"
+
+# Integration messages
+luckperms-title-set: "{prefix}Your server title has been set to &d{title}&f!"
+citizens-raven-master: "&5Welcome to the Raven Master!"
+citizens-raven-trainer: "&5Welcome to the Raven Trainer!"
+
+# Inventory titles
+gui-main: "&5Raven Interface"
+gui-inventory: "&5Raven Inventory"
+gui-abilities: "&5Raven Abilities"
+gui-upgrades: "&5Raven Upgrades"
+gui-crafting: "&5Raven Crafting"
+gui-settings: "&5Raven Settings"
+gui-homes: "&5Raven Homes"
+
+# Help messages
+help-header: "&5==== RavenPets Commands ===="
+help-spawn: "&d/ravenpet spawn &7- Summon your raven"
+help-despawn: "&d/ravenpet despawn &7- Dismiss your raven"
+help-info: "&d/ravenpet info &7- Show information about your raven"
+help-abilities: "&d/ravenpet abilities &7- Show your raven's abilities"
+help-upgrade: "&d/ravenpet upgrade &7- Upgrade your raven"
+help-name: "&d/ravenpet name <n> &7- Rename your raven"
+help-home: "&d/ravenpet home add &7- Add a home location"
+help-home-list: "&d/ravenpet home list &7- List your home locations"
+help-home-tp: "&d/ravenpet home tp <id> &7- Teleport to a home location"
+help-admin-header: "&5==== Admin Commands ===="
+help-admin-addxp: "&d/ravenpet addxp <player> <amount> &7- Add XP to a player's raven"
+help-admin-setlevel: "&d/ravenpet setlevel <player> <level> &7- Set a player's raven level"
